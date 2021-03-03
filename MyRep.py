@@ -13,7 +13,7 @@ class MyRepMod(loader.Module):
         """Включить режим репутаций."""
         repstatus = self.db.get("RepBlyat", "repstatus")
         if repstatus is not True:
-            self.db.set("RelBlyat", "repstatus", True)
+            self.db.set("RepBlyat", "repstatus", True)
             await message.edit(f"<b>[MyRepMod] Режим репутаций включен!</b>")
         else:
             self.db.set("RepBlyat", "repstatus", False)
